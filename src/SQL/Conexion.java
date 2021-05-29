@@ -15,4 +15,33 @@ import java.sql.SQLException;
 
 public class Conexion {
     
+    Connection con = null;
+    private final String url = "";
+    
+    public Conexion() {
+        try 
+        {
+            //con = DriverManager.getConnection(url, usuario, contraseña);
+            con = DriverManager.getConnection(url);
+            if (con != null) 
+            {
+                System.out.println("Conexión a base de datos Tienda listo");
+            }
+        } 
+        catch (SQLException e) 
+        {
+            System.out.println("Error de Conexion" + e.getMessage());
+        } 
+    }
+
+    public Connection Conectar() 
+    {
+        return con;
+    }
+
+    public void desconectar() 
+    {
+        con = null;
+        System.out.println("Conexion terminada");
+    }
 }
