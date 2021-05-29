@@ -285,7 +285,7 @@ public class Peliculas extends javax.swing.JFrame {
 
     private void jPanel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MousePressed
         // TODO add your handling code here:
-        new Peliculas().show();
+        new ConsultaPeliculas().show();
     }//GEN-LAST:event_jPanel4MousePressed
 
     private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
