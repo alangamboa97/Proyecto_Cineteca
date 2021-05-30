@@ -25,7 +25,7 @@ public class Conexion {
             con = DriverManager.getConnection(url);
             if (con != null) 
             {
-                System.out.println("Conexión a base de datos Tienda listo");
+                System.out.println("Conexión a base de datos Cineteca listo");
             }
         } 
         catch (SQLException e) 
