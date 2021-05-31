@@ -33,7 +33,7 @@ public class ControlPeliculas {
       
      public Object[][] mostrarPeliculas()
     {
-        String[] columnas={"Id_Pelicula","Descripcion","Presentacion","Empresa","Existencias","PrecioUnitarioCompra","PrecioUnitarioVenta","Estatus"};
+        String[] columnas={"Id_Pelicula","Titulo","Titulo_Exihibicion","Anio","Estatus","Pais","Director"};
         Object[][] datos = sensql.GetTabla(columnas, "View_Productos", "{CALL SP_Mostrar_Productos}",false);
         return datos;
     }

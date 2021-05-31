@@ -314,14 +314,17 @@ public class Peliculas extends javax.swing.JFrame {
 
     private void jPanel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseEntered
         // TODO add your handling code here:
+        setColor(jPanel7);
     }//GEN-LAST:event_jPanel7MouseEntered
 
     private void jPanel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseExited
         // TODO add your handling code here:
+        resetColor(jPanel7);
     }//GEN-LAST:event_jPanel7MouseExited
 
     private void jPanel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MousePressed
         // TODO add your handling code here:
+        new ActualizarPeliculas().show();
     }//GEN-LAST:event_jPanel7MousePressed
 
     /**

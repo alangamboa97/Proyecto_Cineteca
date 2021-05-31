@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package main;
+import Controles.ControlPeliculas;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -11,13 +15,27 @@ package main;
  */
 public class ConsultaPeliculas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Home_Data
-     */
-    public ConsultaPeliculas() {
+    private Object[][] datostabla; 
+    
+   
+    public ConsultaPeliculas() 
+    {
         initComponents();
+       // mostrar_tabla();
+        setBounds(10,120,940,440);
+        setResizable(false);
+        setVisible(true);
     }
-
+   
+     public void mostrar_tabla()
+    {
+        ControlPeliculas ctr;       
+        ctr = new ControlPeliculas();
+        String[] columnas = {"Id","Titulo","Titulo Exhibicion","Director", "Pais","Anio","Estatus"};
+        datostabla = ctr.mostrarPeliculas();
+        DefaultTableModel datos = new DefaultTableModel(datostabla,columnas);
+        Tabla.setModel(datos);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,9 +81,9 @@ public class ConsultaPeliculas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -76,7 +94,7 @@ public class ConsultaPeliculas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Codigo", "Descripcion", "Presentacion", "Id_Proveedor", "Existencias", "Precio Unitario Compra", "Precio Unitario Venta", "Estatus"
+                "Id", "Titulo", "Titulo Exhibicion", "Año", "Estatus", "Director", "Pais"
             }
         ));
         Tabla.setMaximumSize(new java.awt.Dimension(0, 0));

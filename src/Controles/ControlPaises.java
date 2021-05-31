@@ -5,10 +5,19 @@
  */
 package Controles;
 
+import SQL.Sentencias_sql;
+
 /**
  *
  * @author alang
  */
 public class ControlPaises {
+    
+    Sentencias_sql sensql;
+    
+    public ControlPaises() 
+    {
+        sensql = new Sentencias_sql();
+    }
     
 }

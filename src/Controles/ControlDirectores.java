@@ -5,10 +5,31 @@
  */
 package Controles;
 
+import SQL.Sentencias_sql;
+
 /**
  *
  * @author alang
  */
 public class ControlDirectores {
+    
+    Sentencias_sql sensql;
+    public ControlDirectores() 
+    {
+        sensql = new Sentencias_sql();
+    }
+    
+     public boolean agregarDirector(String N_Director)
+    {               
+        String datos[] = {N_Director};           
+        return sensql.insertar(datos, "{CALL Alta_Director(?)}");                         
+    }
+     
+     public boolean eliminarPelicula(String Id_Director)
+    {
+        String campos[] = {Id_Director};           
+        return sensql.insertar(campos, "{CALL Baja_Director(?)}");
+    } 
+     
     
 }
