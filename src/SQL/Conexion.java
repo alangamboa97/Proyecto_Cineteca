@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class Conexion {
     
     Connection con = null;
-    private final String url = "jdbc:sqlserver://DESKTOP-V2U3HSL;database=Cineteca;integratedSecurity=true";
+    private final String url = "jdbc:sqlserver://DESKTOP-V2U3HSL;database=Cineteca;integratedSecurity=true;";
     
     public Conexion() {
         try 
