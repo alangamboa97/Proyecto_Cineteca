@@ -204,14 +204,14 @@ public void datosPuestos()
             int ini_codigo=0;
             int fin_codigo=0;
     
-            ini_codigo = combo_codigo_producto.getSelectedItem().toString().indexOf('(') + 1;
-            fin_codigo = combo_codigo_producto.getSelectedItem().toString().indexOf(')');            
-            codigo=combo_codigo_producto.getSelectedItem().toString().substring(ini_codigo, fin_codigo);
+            ini_codigo = combo_codigo_producto.getSelectedItem().toString().trim().indexOf('(') + 1;
+            fin_codigo = combo_codigo_producto.getSelectedItem().toString().trim().indexOf(')');            
+            codigo=combo_codigo_producto.getSelectedItem().toString().trim().substring(ini_codigo, fin_codigo);
             descripcion=descripcion_nueva.getText();
             presentacion=presentacion_nueva.getText();
-            ini_codigo = combo_proveedor_nuevo.getSelectedItem().toString().indexOf('(') + 1;
-            fin_codigo = combo_proveedor_nuevo.getSelectedItem().toString().indexOf(')');
-            empresa=combo_proveedor_nuevo.getSelectedItem().toString().substring(ini_codigo, fin_codigo);
+            ini_codigo = combo_proveedor_nuevo.getSelectedItem().toString().trim().indexOf('(') + 1;
+            fin_codigo = combo_proveedor_nuevo.getSelectedItem().toString().trim().indexOf(')');
+            empresa=combo_proveedor_nuevo.getSelectedItem().toString().trim().substring(ini_codigo, fin_codigo);
             existencias=existencias_nueva.getText();
             precio_compra=precio_compra_nuevo.getText();
             precio_venta=precio_venta_nuevo.getText();
